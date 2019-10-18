@@ -13,6 +13,7 @@ body:before {
 	left: 0;
 	right: 0;
 	z-index: -2;
+	overflow: hidden;
 	background: rgb(28, 55, 99);
 	background: -moz-linear-gradient(143deg, rgba(28, 55, 99, 1) 0%, rgba(28, 55, 99, 1) 18%, rgba(187, 59, 86, 1) 65%, rgba(187, 59, 86, 1) 100%);
 	background: -webkit-linear-gradient(143deg, rgba(28, 55, 99, 1) 0%, rgba(28, 55, 99, 1) 18%, rgba(187, 59, 86, 1) 65%, rgba(187, 59, 86, 1) 100%);
@@ -244,6 +245,27 @@ header .btn-outline-primary:hover {
 /*** Media Queries ***/
 
 /*Desktop*/
+@media(min-width: 1049px) {
+	#login #people {
+		height: 33.5rem;
+	}
+}
+@media (min-width: 1600px){
+	.container {
+    	max-width: 1400px;
+	}
+	#login #people {
+	    height: 45.5rem;
+	}
+}
+@media (min-width: 1920px){
+	.container {
+    	max-width: 1720px;
+	}
+	#login #people {
+	    height: 52.5rem;
+	}
+}
 @media(max-width: 1049px) {
 	#login #people {
 		height: 33.5rem;
@@ -272,7 +294,8 @@ header .btn-outline-primary:hover {
 	}
 	.focused .form-label {
 		transform: translateY(-90%);
-		font-size: .6em;
+		top: 1rem;
+		font-size: .55em;
 	}
 	.form-group .error {
 		font-size: .7rem;
@@ -296,6 +319,9 @@ header .btn-outline-primary:hover {
 	#login #member {
 		text-align: center;
 	}
+	.container {
+	    padding: 0 2rem;
+	}
 }
 @media (max-width: 1024px) and (orientation: portrait) {
 	#login #people {
@@ -311,11 +337,16 @@ header .btn-outline-primary:hover {
 }
 
 /*Mobile*/
-
-@media(max-width: 320px) {
+@media(max-width: 360px) {
 	header .btn-outline-primary {
-		padding: .3rem 1.5rem;
-		font-size: 0.6rem;
+		margin-left: 1rem !important;
+		padding: .45rem 1rem;
+    	font-size: 0.7rem;
+	}
+}
+@media(max-width: 320px) {
+	.container {
+	    padding: 0 1rem;
 	}
 	#login #loginForm h1 {
 		font-size: 1.5rem;
@@ -356,6 +387,7 @@ header .btn-outline-primary:hover {
 	#login #people {
 	    height: 26.5rem;
 	    top: 1rem;
+	    opacity: .3;
     }
 }
 @media (max-width: 731px) and (orientation: landscape) {
